@@ -3,6 +3,14 @@ body {
   font-family: "Prompt", sans-serif;
 }
 
+h6 {
+  font-size: 37px;
+  font-weight: bold;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
 html,
 body,
 #root {
@@ -21,5 +29,183 @@ body,
   height: 90vh;
   background-color: white;
   border-radius: 20px;
-  margin-top: 40px;
+  margin-top: 56px;
+}
+
+.logo-wrapper {
+  transform: translate(-50%, -50%) scale(0.6);
+  position: absolute;
+  top: 36px;
+  left: 50%;
+}
+
+.title {
+  color: #383838;
+  text-align: center;
+}
+
+.first-section {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // gap: 24px;
+}
+.input {
+  height: 60px;
+  color: #4e4e4e;
+  border: 3px solid lightgray;
+  border-radius: 10px;
+  font-size: 34px;
+}
+
+button {
+  color: #ffffff;
+  background-image: radial-gradient(
+    ellipse farthest-corner at top left,
+    #c41417 0%,
+    #b31315 100%
+  );
+  border-radius: 6px;
+  border: 0;
+  font-family: Prompt;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px;
+  min-width: 100px;
+}
+
+.acceptButton {
+  min-width: 100px;
+  transform: translateY(-20px);
+  transform: scale(1);
+  position: relative;
+  animation-name: button;
+  animation-duration: 0.4s;
+}
+.createButton {
+  min-width: 100px;
+  transform: translateY(-20px);
+  transform: scale(1);
+  position: relative;
+  animation-name: button;
+  animation-duration: 0.4s;
+}
+.acceptButton:hover {
+  box-shadow: 0px 8px 8px rgba(17, 17, 17, 0.4);
+  transform: scale(1.05);
+  transition: all 0.25s ease 0s;
+}
+.createButton:hover {
+  box-shadow: 0px 8px 8px rgba(17, 17, 17, 0.4);
+  transform: scale(1.05);
+  transition: all 0.25s ease 0s;
+}
+.textButton {
+  color: #6f6f6f;
+  background-color: white;
+  background-image: none;
+}
+.textButton:hover {
+  color: #c41417;
+  transform: scale(1.05);
+  transition: all 0.1s ease 0s;
+}
+
+.button-wrapper {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fadein-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-20px);
+  transform: scale(1);
+  position: relative;
+  animation-name: button;
+  animation-duration: 0.3s;
+}
+
+.start-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 24px;
+  animation-name: title;
+  animation-duration: 0.5s;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  background-color: rgb(238, 232, 232);
+  border-radius: 20px;
+  margin: 16px;
+  animation: chat;
+  animation-duration: 0.8s;
+}
+.other-user {
+  margin-left: 24px;
+  margin-top: 8px;
+}
+.message-text {
+  background-color: #cecece;
+  max-width: 100px;
+  border-radius: 8px;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 40px;
+  margin-left: 8px;
+}
+.user-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4e4e4e;
+}
+
+.me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 16px;
+  margin-top: 8px;
+}
+@keyframes button {
+  0% {
+    top: 20px;
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+    top: 0px;
+  }
+}
+
+@keyframes chat {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
